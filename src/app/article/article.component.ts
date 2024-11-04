@@ -8,7 +8,9 @@ import { Component, HostBinding } from '@angular/core';
   styleUrl: './article.component.css'
 })
 export class ArticleComponent {
+  // CSS class applied to the host of component
   @HostBinding("attr.class") cssClass = "row";
+
   // Definition of variables
   votes: number;
   title: string;
