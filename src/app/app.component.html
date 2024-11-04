@@ -3,10 +3,20 @@
 
   <div class="field">
     <label for="title">Title</label>
-    <input name="title" id="title" />
+    <!-- #newtitle refers to a variable used in function addArticle -->
+    <input name="title" id="title" #newtitle />
   </div>
   <div class="field">
     <label for="link">Link</label>
-    <input name="link" id="link" />
+    <!-- Same for #newlink -->
+    <input name="link" id="link" #newlink />
   </div>
+
+  <!-- Added button with function addArticle() -->
+  <button
+    (click)="addArticle(newtitle, newlink)"
+    class="ui positive right floated button"
+  >
+    Submit link
+  </button>
 </form>
