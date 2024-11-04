@@ -23,11 +23,14 @@ export class ArticleComponent {
     this.votes = 10;
   }
 
-  voteUp() {
+  voteUp(): boolean {
     this.votes += 1;
+    // Evita que la página se recargue por default
+    return false;
   }
 
-  voteDown() {
+  voteDown(): boolean {
     this.votes -= 1;
+    return false;
   }
 }
